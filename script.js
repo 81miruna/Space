@@ -435,13 +435,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ============ 13. CONTACT FORM (placeholder submit) ============ */
   (function contactForm(){
-    const form = document.getElementById('contactForm');
-    const status = document.getElementById('formStatus');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      status.textContent = "Message ready to send — connect this form to an email service to go live.";
-      form.reset();
-    });
-  })();
+  const form = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqggpre"; // <-- paste your real endpoint here
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = "Sending…";
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        status.textContent = "Thanks — your message has been sent!";
+        form.reset();
+      } else {
+        status.textContent = "Something went wrong — please try emailing directly instead.";
+      }
+    } catch (err) {
+      status.textContent = "Something went wrong — please try emailing directly instead.";
+    }
+  });
+})();
 
 });
