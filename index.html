@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exploring the Universe, One Question at a Time</title>
+<meta name="description" content="A personal astronomy &amp; astrophysics learning hub — curated books, exercises, projects, videos and monthly sky updates for curious minds.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= STARFIELD CANVAS ================= -->
+<canvas id="starfield"></canvas>
+<div class="nebula-glow nebula-1"></div>
+<div class="nebula-glow nebula-2"></div>
+
+<!-- ================= CONSTELLATION RAIL (signature element) ================= -->
+<nav class="rail" aria-hidden="true">
+  <svg class="rail-line" viewBox="0 0 2 100" preserveAspectRatio="none"><line x1="1" y1="0" x2="1" y2="100" /></svg>
+  <button class="rail-dot" data-target="home" aria-label="Home"><span class="rail-label">Home</span></button>
+  <button class="rail-dot" data-target="about" aria-label="About Me"><span class="rail-label">About Me</span></button>
+  <button class="rail-dot" data-target="resources" aria-label="Resources"><span class="rail-label">Resources</span></button>
+  <button class="rail-dot" data-target="youtube" aria-label="YouTube Recommendations"><span class="rail-label">YouTube</span></button>
+  <button class="rail-dot" data-target="updates" aria-label="Monthly Astronomy Updates"><span class="rail-label">Monthly Updates</span></button>
+  <button class="rail-dot" data-target="contact" aria-label="Contact"><span class="rail-label">Contact</span></button>
+</nav>
+
+<!-- ================= TOP NAVIGATION ================= -->
+<header class="topnav" id="topnav">
+  <a href="#home" class="brand">
+    <span class="brand-mark">✦</span> orbitnotes
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About Me</a></li>
+    <li><a href="#resources" class="nav-link">Resources</a></li>
+    <li><a href="#youtube" class="nav-link">YouTube</a></li>
+    <li><a href="#updates" class="nav-link">Monthly Updates</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+</header>
+
+<main>
+
+<!-- ================= HOME / HERO ================= -->
+<section id="home" class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow mono">field notes on the cosmos</p>
+    <h1 class="hero-title">Exploring the Universe,<br><em>One Question</em> at a Time.</h1>
+    <blockquote id="heroQuote" class="hero-quote mono">
+      <p class="quote-text"></p>
+      <cite class="quote-author"></cite>
+    </blockquote>
+    <a href="#welcome" class="btn btn-primary" id="startExploring">Start Exploring</a>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</section>
+
+<!-- ================= WELCOME ================= -->
+<section id="welcome" class="section welcome fade-section">
+  <div class="container narrow">
+    <p class="eyebrow mono">01 — welcome</p>
+    <h2 class="section-title">Welcome!</h2>
+    <p class="lead">
+      This site began as a personal notebook — one built by a high-school student who fell in love
+      with astrophysics and never quite recovered. It's grown into something bigger: a single, organized
+      home for the books, problem sets, projects, and videos that make the universe a little easier to reach.
+    </p>
+    <p class="body-text muted">
+      Learning astronomy on your own can feel scattered — a great lecture here, a good book there, a worksheet
+      you can never find again. <strong>orbitnotes</strong> exists to put all of that in one place, sorted and
+      ready, so the only thing left to do is get curious. Whether you're just noticing the moon for the first
+      time or already chasing exoplanet data, there's something here for you.
+    </p>
+  </div>
+</section>
+
+<!-- ================= ABOUT ME ================= -->
+<section id="about" class="section about fade-section">
+  <div class="container">
+    <p class="eyebrow mono">02 — about me</p>
+    <h2 class="section-title">Who's behind this?</h2>
+
+    <div class="about-grid">
+      <div class="about-photo">
+        <div class="photo-placeholder">
+          <span class="mono">add photo</span>
+        </div>
+      </div>
+
+      <div class="about-copy">
+        <h3 class="sub-title">Who I Am</h3>
+        <p class="body-text">
+          I'm a high-school student with a one-track mind for astrophysics, mathematics, physics, and
+          scientific research. Most of my free time goes to reading about how stars die, arguing with problem
+          sets, or staying up far too late for a meteor shower. I started this project because I wanted a
+          place where people like me — curious, a little overwhelmed, not sure where to start — could follow
+          that curiosity without getting lost.
+        </p>
+
+        <h3 class="sub-title">My Goals</h3>
+        <ul class="goals-list">
+          <li><span class="goal-icon">◈</span> Study astrophysics at university and go deep into the questions that keep me up at night.</li>
+          <li><span class="goal-icon">◈</span> Take part in real research, even in small ways, while still in school.</li>
+          <li><span class="goal-icon">◈</span> Inspire other students to see science as something they can actually do, not just admire.</li>
+          <li><span class="goal-icon">◈</span> Make astronomy genuinely accessible — no gatekeeping, no jargon walls.</li>
+        </ul>
+
+        <h3 class="sub-title">Interests</h3>
+        <div class="interest-cards">
+          <div class="interest-card"><span>Astrophysics</span></div>
+          <div class="interest-card"><span>Astronomy</span></div>
+          <div class="interest-card"><span>Cosmology</span></div>
+          <div class="interest-card"><span>Mathematics</span></div>
+          <div class="interest-card"><span>Scientific Research</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESOURCES ================= -->
+<section id="resources" class="section resources fade-section">
+  <div class="container">
+    <p class="eyebrow mono">03 — resources</p>
+    <h2 class="section-title">Resources</h2>
+    <p class="lead">Everything below is organized so you can go from "where do I even start" to "here's my next worksheet" in under a minute.</p>
+
+    <!-- search + filter -->
+    <div class="resource-toolbar">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="resourceSearch" placeholder="Search resources… e.g. relativity, moon, spectroscope" aria-label="Search resources">
+      </div>
+      <div class="filter-wrap" role="group" aria-label="Filter by difficulty">
+        <button class="filter-chip active" data-level="all">All levels</button>
+        <button class="filter-chip" data-level="beginner">Beginner</button>
+        <button class="filter-chip" data-level="intermediate">Intermediate</button>
+        <button class="filter-chip" data-level="advanced">Advanced</button>
+      </div>
+    </div>
+
+    <!-- Resource sub-nav -->
+    <div class="resource-tabs" role="tablist">
+      <button class="resource-tab active" data-tab="coursebooks" role="tab">Course Books</button>
+      <button class="resource-tab" data-tab="reading" role="tab">Books for Reading</button>
+      <button class="resource-tab" data-tab="exercises" role="tab">Exercises</button>
+      <button class="resource-tab" data-tab="projects" role="tab">Independent Projects</button>
+    </div>
+
+    <!-- 1. Course Books -->
+    <div class="resource-panel active" id="panel-coursebooks">
+      <div class="card-grid" id="coursebooksGrid"></div>
+    </div>
+
+    <!-- 2. Books for Reading -->
+    <div class="resource-panel" id="panel-reading">
+      <div class="card-grid" id="readingGrid"></div>
+    </div>
+
+    <!-- 3. Exercises -->
+    <div class="resource-panel" id="panel-exercises">
+      <div class="accordion" id="exerciseAccordion"></div>
+    </div>
+
+    <!-- 4. Independent Projects -->
+    <div class="resource-panel" id="panel-projects">
+      <div class="card-grid" id="projectsGrid"></div>
+    </div>
+
+    <p class="empty-state mono" id="resourceEmptyState" hidden>No resources match your search yet — try a different word.</p>
+  </div>
+</section>
+
+<!-- ================= YOUTUBE ================= -->
+<section id="youtube" class="section youtube fade-section">
+  <div class="container">
+    <p class="eyebrow mono">04 — watch &amp; learn</p>
+    <h2 class="section-title">YouTube Recommendations</h2>
+    <p class="lead">Curated channels and videos, grouped by where you are in your journey.</p>
+
+    <div class="yt-categories" id="ytCategories"></div>
+  </div>
+</section>
+
+<!-- ================= MONTHLY UPDATES ================= -->
+<section id="updates" class="section updates fade-section">
+  <div class="container">
+    <p class="eyebrow mono">05 — the sky right now</p>
+    <h2 class="section-title">Monthly Astronomy Updates</h2>
+    <p class="lead">A running log of what's worth looking up for, month by month.</p>
+
+    <div class="updates-grid" id="updatesGrid"></div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section faq fade-section">
+  <div class="container narrow">
+    <p class="eyebrow mono">06 — questions</p>
+    <h2 class="section-title">Frequently Asked</h2>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact fade-section">
+  <div class="container narrow">
+    <p class="eyebrow mono">07 — say hello</p>
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="lead">Questions, resource suggestions, or just want to talk about black holes? Reach out.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a class="contact-item" href="mailto:hello@orbitnotes.space">
+          <span class="contact-icon mono">@</span> hello@orbitnotes.space
+        </a>
+        <a class="contact-item" href="tel:+10000000000">
+          <span class="contact-icon mono">#</span> +1 (000) 000-0000
+        </a>
+        <a class="contact-item" href="https://instagram.com" target="_blank" rel="noopener">
+          <span class="contact-icon mono">◎</span> @orbitnotes
+        </a>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" required placeholder="Your name">
+        </label>
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="you@example.com">
+        </label>
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="4" required placeholder="What's on your mind?"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary full-width">Send Message</button>
+        <p class="form-status mono" id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-tagline">Keep Looking Up.</p>
+  <p class="footer-copy mono">© 2026 [Your Name]</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
