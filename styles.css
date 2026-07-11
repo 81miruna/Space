@@ -279,6 +279,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .tag.beginner{ color:#8ce8b0; border-color:rgba(140,232,176,0.3); }
 .tag.intermediate{ color:var(--accent); }
 .tag.advanced{ color:var(--accent-2); border-color:rgba(141,123,255,0.35); }
+.tag.genre{
+  color: var(--accent-2);
+  border-color: rgba(141,123,255,0.35);
+}
 .card-link{
   font-size:0.85rem; color:var(--accent); font-weight:500; display:inline-flex; align-items:center; gap:4px;
 }
