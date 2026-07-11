@@ -296,7 +296,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width:760px){
   .about-grid{ grid-template-columns:1fr; }
   .photo-placeholder{ max-width:220px; }
-   .about-photo-img{
+  .about-photo-img{
   width:100%;
   aspect-ratio:1;
   object-fit:cover;
