@@ -307,9 +307,9 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================= */
   const YT_CATEGORIES = [
     { name:"Beginner Astronomy", videos:[
-      { title:"How to Actually Learn Astronomy", creator:"Anton Petrov", desc:"A friendly starting map for total beginners." },
-      { title:"Naked-Eye Astronomy 101", creator:"Astrum", desc:"What you can see tonight with nothing but your eyes." },
-      { title:"Your First Telescope, Explained", creator:"Dylan O'Donnell", desc:"Choosing and setting up a beginner scope." },
+      { title:"Introduction to Astronomy", creator:"CrashCourse", desc:"A friendly starting point for beginners", url:"https://youtu.be/0rHUDWjR5gg?si=kByT8SaWxRZ_hgM8" },
+      { title:"Naked-Eye Astronomy", creator:"BBC Sky", desc:"What you can see tonight with nothing but your eyes", url:"https://youtu.be/Gl9qtBbKhEk?si=toXVurH73LyCqoSw" },
+      { title:"Your First Telescope, Explained", creator:"Ian Lauer Astro", desc:"Choosing the best telescope for yourself", url:"https://youtu.be/6TIOSPMZkL0?si=k36Q2tIWfnBXho0FV" },
     ]},
     { name:"University Lectures", videos:[
       { title:"MIT 8.01 Classical Mechanics", creator:"MIT OpenCourseWare", desc:"Full lecture series on introductory mechanics." },
