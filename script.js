@@ -148,11 +148,11 @@ document.addEventListener('DOMContentLoaded', () => {
      Add new items here — cards render automatically.
      ========================================================= */
   const COURSE_BOOKS = [
-    { title:"Astronomical Problems", desc:"An introductory course in astrophysics", level:"beginner",  fileUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBT6gAPQHAeT4e0JCTfV-4xAXqLZkEurRRnPwvfB39Cczw?e=d7v2hv", cover:"astro1.jpg",  fileType:"PDF" },
+    { title:"Astronomical Problems", desc:"An introductory course in astrophysics", level:"beginner",  fileUrl:"Culegere Astro.pdf", cover:"astro1.jpg",  fileType:"PDF" },
     { title:"Introduction to Astronomy", desc:"From atomic nuclei to galactic superclusters", level:"beginner", fileUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBCRxSE5dOPQq-IXX3BYGtkAT8UAvBS6j5MSG5TpwF2nPs?e=IPT2mU", cover:"astro2.webp",  fileType:"PDF"},
-    { title:"Cosmology", desc:"The expanding universe, dark energy, and the Big Bang explained using accessible everyday analogies", level:"intermediate", fileUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDOeFXZkgpOTosaL1j4beYdAfwJnduo-KZ2ieAnqSLDijs?e=8O1qSl", cover:"astro3.jfif",  fileType:"PDF" },
-    { title:"Fundamental Astronomy", desc:"A Comprehensive introduction to both classical and modern astronomy", level:"intermediate" , fileUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDH5AFn7tPmRpPzTiMPK9cGAQCKsM0nni0uO3JE01eRDfk?e=d4O0XF", cover:"astro4.png",  fileType:"PDF"},
-    { title:"Introduction to Cosmology: Second Edition", desc:"Learn accurate physics that aligns with standard university curricula", level:"advanced", fileUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBrDKEB7pLrRIjYtd_FlaP5AYa9rSg7ELnkHC4hTm6X2q4?e=C38LYv", cover:"astro5.jpeg",  fileType:"PDF"},
+    { title:"Cosmology", desc:"The expanding universe, dark energy, and the Big Bang explained using accessible everyday analogies", level:"intermediate", fileUrl:"Ryden Cosmology.pdf", cover:"astro3.jfif",  fileType:"PDF" },
+    { title:"Fundamental Astronomy", desc:"A Comprehensive introduction to both classical and modern astronomy", level:"intermediate" , fileUrl:"Fundamental Astronomy H.Karttunen.pdf", cover:"astro4.png",  fileType:"PDF"},
+    { title:"Introduction to Cosmology: Second Edition", desc:"Learn accurate physics that aligns with standard university curricula", level:"advanced", fileUrl:"Barbara Ryden - Introduction to Cosmology-Cambridg_240803_113236.pdf", cover:"astro5.jpeg",  fileType:"PDF"},
     { title:"Foundations of Modern Astrophysics", desc:"A mathematically rigorous, and exhaustive deep dive into the actual physics governing everything", level:"advanced", cover:"astro6.webp",  fileType:"PDF" , fileUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQCAdTF3hGHaT7Aw8WSu4refAevpmNWGnk4C96ol8C08BTI?e=KKP7L3"},
   ];
 
