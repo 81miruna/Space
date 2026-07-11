@@ -148,12 +148,12 @@ document.addEventListener('DOMContentLoaded', () => {
      Add new items here — cards render automatically.
      ========================================================= */
   const COURSE_BOOKS = [
-    { title:"University Physics", desc:"The classic calculus-based intro to mechanics, waves, and thermodynamics.", level:"beginner" },
-    { title:"Introduction to Classical Mechanics", desc:"A rigorous next step after intro physics, with worked problem sets.", level:"intermediate" },
-    { title:"An Introduction to Modern Astrophysics", desc:"The standard undergraduate astrophysics reference — stars, galaxies, cosmology.", level:"advanced" },
-    { title:"Griffiths' Introduction to Electrodynamics", desc:"The go-to text for electromagnetism, from statics to radiation.", level:"advanced" },
-    { title:"Mathematical Methods for Physics", desc:"Builds the math toolkit — vectors, ODEs, Fourier series — used across every topic here.", level:"intermediate" },
-    { title:"Foundations of Astronomy", desc:"A gentle, well-illustrated starting point for naked-eye and telescope astronomy.", level:"beginner" },
+    { title:"Astronomical Problems", desc:"An introductory course in astrophysics", level:"beginner", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBT6gAPQHAeT4e0JCTfV-4xAXqLZkEurRRnPwvfB39Cczw?e=d7v2hv" },
+    { title:"Introduction to Astronomy", desc:"From atomic nuclei to galactic superclusters", level:"beginner" },
+    { title:"Cosmology", desc:"The expanding universe, dark energy, and the Big Bang explained using accessible everyday analogies", level:"intermediate", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDOeFXZkgpOTosaL1j4beYdAfwJnduo-KZ2ieAnqSLDijs?e=8O1qSl" },
+    { title:"Fundamental Astronomy", desc:"A Comprehensive introduction to both classical and modern astronomy", level:"intermediate" , pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDH5AFn7tPmRpPzTiMPK9cGAQCKsM0nni0uO3JE01eRDfk?e=d4O0XF"},
+    { title:"Introduction to Cosmology: Second Edition", desc:"Learn accurate physics that aligns with standard university curricula", level:"advanced", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBrDKEB7pLrRIjYtd_FlaP5AYa9rSg7ELnkHC4hTm6X2q4?e=C38LYv"},
+    { title:"Foundations of Modern Astrophysics", desc:"A mathematically rigorous, and exhaustive deep dive into the actual physics governing everything", level:"advanced" },
   ];
 
   const READING_BOOKS = [
@@ -188,19 +188,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const tagLabel = { beginner:"Beginner", intermediate:"Intermediate", advanced:"Advanced" };
 
   function bookCard(book){
-    return `
-      <div class="card" data-level="${book.level}" data-search="${book.title.toLowerCase()} ${book.desc.toLowerCase()}">
-        <div class="card-media mono">cover placeholder</div>
-        <div class="card-body">
-          <h3 class="card-title">${book.title}</h3>
-          <p class="card-desc">${book.desc}</p>
-          <div class="card-meta">
-            <span class="tag ${book.level}">${tagLabel[book.level]}</span>
-            <a class="card-link" href="#" onclick="return false;">Download PDF ↓</a>
-          </div>
+  return `
+    <div class="card" data-level="${book.level}" data-search="${book.title.toLowerCase()} ${book.desc.toLowerCase()}">
+      <div class="card-media mono">cover placeholder</div>
+      <div class="card-body">
+        <h3 class="card-title">${book.title}</h3>
+        <p class="card-desc">${book.desc}</p>
+        <div class="card-meta">
+          <span class="tag ${book.level}">${tagLabel[book.level]}</span>
+          ${book.pdfUrl
+            ? `<a class="card-link" href="${book.pdfUrl}" target="_blank" rel="noopener">Download PDF ↓</a>`
+            : `<a class="card-link" href="#" onclick="return false;">Download PDF ↓</a>`}
         </div>
-      </div>`;
-  }
+      </div>
+    </div>`;
+}
 
   function projectCard(p){
     return `
