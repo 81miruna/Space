@@ -380,45 +380,36 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       month:"July 2026",
       title:"Meteors, a Morning Planet Parade, and a New Launch Window",
+      image:"july.jpg",
+      url:"https://spacedaily.com/m-in-july-2026-europes-euclid-telescope-found-31-of-the-oldest-quasars-ever-seen-two-now-shining-with-the-light-of-a-trillion-suns-when-the-cosmos-was-just-5-percent-of-its-present-age-thei/",
       items:[
-        "Southern Delta Aquariids peak late in the month",
-        "Venus and Jupiter both visible before dawn",
-        "A new crewed launch window opens mid-month",
-        "Fresh JWST imagery of a nearby star nursery",
+        "Europe's Euclid telescope has found 31 of the oldest known quasars in one go, and the haul roughly doubles the number known from that early stretch of the universe.",
       ],
     },
     {
       month:"June 2026",
       title:"Solstice Skies and a Bright Noctilucent Season",
+      image:"june.jpg",
+      url:"https://bintel.com.au/blogs/news/space-and-astronomy-news-27th-june-2026?srsltid=AfmBOooVnHeQG3ePpb8Zy1Rwj15uDyoeHtvKPfhJRoukqkQw0q1AiucS",
       items:[
-        "June solstice marks the longest daylight of the year",
-        "Noctilucent clouds visible at high latitudes after sunset",
-        "Mercury reaches its best evening visibility of the year",
-        "New exoplanet candidate announced from transit survey data",
+        "Comet 3I/ATLAS is older than the Solar System. NASA confirms our most recent visitor is 10 to 12 billion years old.",
       ],
     },
-    {
-      month:"May 2026",
-      title:"Eta Aquariids and Saturn's Return to the Morning Sky",
-      items:[
-        "Eta Aquariid meteor shower peaks in the first week",
-        "Saturn becomes visible again in the pre-dawn sky",
-        "A small asteroid makes a well-tracked close approach",
-        "ESA mission update on upcoming sample-return timeline",
-      ],
-    },
+    
   ];
 
   document.getElementById('updatesGrid').innerHTML = MONTHLY_UPDATES.map(u => `
     <article class="update-card">
-      <div class="update-media mono">sky image placeholder</div>
+      <div class="update-media" ${u.image ? `style="background:url('${u.image}') center/cover;"` : ''}>
+  ${u.image ? '' : '<span class="mono">sky image placeholder</span>'}
+</div>
       <div class="update-body">
         <p class="update-month mono">${u.month}</p>
         <h3 class="update-title">${u.title}</h3>
         <ul class="update-list">
           ${u.items.map(i => `<li>${i}</li>`).join('')}
         </ul>
-        <a class="card-link" href="#" onclick="return false;">Read More →</a>
+        ${u.url ? `<a class="card-link" href="${u.url}" target="_blank" rel="noopener">Read More →</a>` : ''}
       </div>
     </article>`).join('');
 
