@@ -344,17 +344,20 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   function ytCard(v){
-    return `
-      <div class="yt-card">
-        <div class="yt-thumb">thumbnail</div>
-        <div class="yt-body">
-          <h4 class="yt-title">${v.title}</h4>
-          <p class="yt-creator">${v.creator}</p>
-          <p class="yt-desc">${v.desc}</p>
-          <a class="yt-watch" href="#" onclick="return false;">Watch ▸</a>
-        </div>
-      </div>`;
-  }
+  const idMatch = v.url ? v.url.match(/(?:v=|youtu\.be\/)([\w-]{11})/) : null;
+  const videoId = idMatch ? idMatch[1] : null;
+  const thumb = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : null;
+  return `
+    <div class="yt-card">
+      <div class="yt-thumb" ${thumb ? `style="background:url('${thumb}') center/cover;"` : ''}></div>
+      <div class="yt-body">
+        <h4 class="yt-title">${v.title}</h4>
+        <p class="yt-creator">${v.creator}</p>
+        <p class="yt-desc">${v.desc}</p>
+        <a class="yt-watch" href="${v.url || '#'}" target="_blank" rel="noopener">Watch ▸</a>
+      </div>
+    </div>`;
+}
 
   document.getElementById('ytCategories').innerHTML = YT_CATEGORIES.map(cat => `
     <div class="yt-category">
