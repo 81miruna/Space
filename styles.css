@@ -326,6 +326,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* =========================================================
    Resources toolbar / tabs
    ========================================================= */
+#readingGrid{
+  display:block;
+}
 .resource-toolbar{ display:flex; flex-wrap:wrap; gap:16px; margin-bottom:28px; align-items:center; justify-content:space-between; }
 .search-wrap{
   display:flex; align-items:center; gap:10px; background:var(--card); border:1px solid var(--border);
