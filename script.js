@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { title:"Brief Answers to the Big Questions", desc:"The book blends theoretical physics with humanitarian concern to make complex science universally accessible", level:"beginner", fileUrl:"_OceanofPDF.com_Brief_Answers_to_the_Big_Questions_-_Stephen_Hawking.epub", fileType:"EPUB" },
   ]},
   { name:"Stories", books:[
-    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", level:"Sci-Fi", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
-    { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", level:"Thriller",fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" },
-    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance",level:"Young Adult", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen" , fileType:"PDF"},
+    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", genre:"Sci-Fi", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
+    { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", genre:"Thriller",fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" },
+    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance",genre:"Young Adult", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen" , fileType:"PDF"},
   ]},
 ];
 
