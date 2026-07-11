@@ -158,14 +158,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
  const READING_CATEGORIES = [
   { name:"Big Ideas", books:[
-    { title:"Astrophysics for People in a Hurry", desc:"A fast, funny crash course through the biggest ideas in the field.", level:"beginner", fileUrl:"_OceanofPDF.com_Astrophysics_for_People_in_a_Hurry_-_Neil_DeGrasse_Tyson.epub", fileType:"EPUB" },
-    { title:"A Brief History of Time", desc:"Hawking's approachable walk through black holes, time, and the Big Bang.", level:"intermediate", fileUrl:"_OceanofPDF.com_Brief_history_of_time_-_Stephen_hawking.pdf", fileType:"PDF" },
-    { title:"Brief Answers to the Big Questions", desc:"The book blends theoretical physics with humanitarian concern to make complex science universally accessible", level:"beginner", fileUrl:"_OceanofPDF.com_Brief_Answers_to_the_Big_Questions_-_Stephen_Hawking.epub", fileType:"EPUB" },
+    { title:"Astrophysics for People in a Hurry", desc:"A fast, funny crash course through the biggest ideas in the field.", level:"beginner", fileUrl:"_OceanofPDF.com_Astrophysics_for_People_in_a_Hurry_-_Neil_DeGrasse_Tyson.epub", fileType:"EPUB", cover:"neil.jpeg" },
+    { title:"A Brief History of Time", desc:"Hawking's approachable walk through black holes, time, and the Big Bang.", level:"intermediate", fileUrl:"_OceanofPDF.com_Brief_history_of_time_-_Stephen_hawking.pdf", fileType:"PDF", cover:"abrief.jpeg" },
+    { title:"Brief Answers to the Big Questions", desc:"The book blends theoretical physics with humanitarian concern to make complex science universally accessible", level:"beginner", fileUrl:"_OceanofPDF.com_Brief_Answers_to_the_Big_Questions_-_Stephen_Hawking.epub", fileType:"EPUB" , cover:"stephenq.jpg"},
   ]},
   { name:"Stories", books:[
-    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", genre:"Sci-Fi", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
-    { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", genre:"Thriller",fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" },
-    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance",genre:"Young Adult", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen.pdf" , fileType:"PDF"},
+    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", genre:"Sci-Fi", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB", cover:"interstellar.jpg" },
+    { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", genre:"Thriller",fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" , cover:"dark.jpg"},
+    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance",genre:"Young Adult", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen.pdf" , fileType:"PDF", cover:"ascension.jpg"},
   ]},
 ];
 
