@@ -233,7 +233,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    Cards (generic)
    ========================================================= */
 .card-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px; }
-
+.book-category{ margin-bottom:40px; }
+.book-category:last-child{ margin-bottom:0; }
+.book-category-title{
+  font-family:var(--font-display); font-size:1.15rem; font-weight:500;
+  margin:0 0 18px; color:var(--text);
+}
 .card{
   background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
   overflow:hidden; box-shadow:var(--shadow-soft);
