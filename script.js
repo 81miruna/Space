@@ -156,14 +156,18 @@ document.addEventListener('DOMContentLoaded', () => {
     { title:"Foundations of Modern Astrophysics", desc:"A mathematically rigorous, and exhaustive deep dive into the actual physics governing everything", level:"advanced", cover:"astro6.webp" },
   ];
 
-  const READING_BOOKS = [
-    { title:"Cosmos", desc:"Carl Sagan's sweeping, poetic tour of the universe and our place in it.", level:"beginner" },
-    { title:"Astrophysics for People in a Hurry", desc:"A fast, funny crash course through the biggest ideas in the field.", level:"beginner" },
-    { title:"A Brief History of Time", desc:"Hawking's approachable walk through black holes, time, and the Big Bang.", level:"intermediate" },
-    { title:"The Elegant Universe", desc:"A vivid introduction to string theory and the search for a theory of everything.", level:"intermediate" },
-    { title:"Black Holes and Time Warps", desc:"Kip Thorne on the physics — and the physicists — behind general relativity's strangest predictions.", level:"advanced" },
-    { title:"The Order of Time", desc:"Carlo Rovelli's meditation on what time actually is, once you stop assuming.", level:"intermediate" },
-  ];
+ const READING_CATEGORIES = [
+  { name:"Big Ideas", books:[
+    { title:"Astrophysics for People in a Hurry", desc:"A fast, funny crash course through the biggest ideas in the field.", level:"beginner", fileUrl:"_OceanofPDF.com_Astrophysics_for_People_in_a_Hurry_-_Neil_DeGrasse_Tyson.epub", fileType:"EPUB" },
+    { title:"A Brief History of Time", desc:"Hawking's approachable walk through black holes, time, and the Big Bang.", level:"intermediate", fileUrl:"_OceanofPDF.com_Brief_history_of_time_-_Stephen_hawking", fileType:"PDF" },
+    { title:"Brief Answers to the Big Questions", desc:"The book blends theoretical physics with humanitarian concern to make complex science universally accessible", level:"beginner", fileUrl:"_OceanofPDF.com_Brief_Answers_to_the_Big_Questions_-_Stephen_Hawking.epub", fileType:"EPUB" },
+  ]},
+  { name:"Stories", books:[
+    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
+    { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" },
+    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen" , fileType:"PDF"},
+  ]},
+];
 
   const EXERCISE_TOPICS = [
     { topic:"Mechanics", worksheets:["Kinematics warm-up", "Newton's laws problem set", "Energy & momentum challenge"] },
@@ -198,7 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="card-desc">${book.desc}</p>
         <div class="card-meta">
           <span class="tag ${book.level}">${tagLabel[book.level]}</span>
-          <a class="card-link" href="#" onclick="return false;">Download PDF ↓</a>
+          ${book.fileUrl
+            ? `<a class="card-link" href="${book.fileUrl}" target="_blank" rel="noopener">Download ${book.fileType} ↓</a>`
+            : `<a class="card-link" href="#" onclick="return false;">Coming soon</a>`}
         </div>
       </div>
     </div>`;
