@@ -311,35 +311,25 @@ document.addEventListener('DOMContentLoaded', () => {
       { title:"Naked-Eye Astronomy", creator:"BBC Sky", desc:"What you can see tonight with nothing but your eyes", url:"https://youtu.be/Gl9qtBbKhEk?si=toXVurH73LyCqoSw" },
       { title:"Your First Telescope, Explained", creator:"Ian Lauer Astro", desc:"Choosing the best telescope for yourself", url:"https://youtu.be/6TIOSPMZkL0?si=k36Q2tIWfnBXho0FV" },
     ]},
-    { name:"University Lectures", videos:[
-      { title:"MIT 8.01 Classical Mechanics", creator:"MIT OpenCourseWare", desc:"Full lecture series on introductory mechanics." },
-      { title:"Stanford Modern Physics", creator:"Stanford Online", desc:"Bridging classical and quantum ideas." },
-      { title:"Yale Fundamentals of Physics", creator:"YaleCourses", desc:"A complete undergraduate physics sequence." },
-    ]},
     { name:"Astrophysics", videos:[
-      { title:"How Stars Die", creator:"PBS Space Time", desc:"Stellar evolution from birth to remnant." },
-      { title:"What Is Dark Matter, Really?", creator:"Kurzgesagt", desc:"An accessible visual explainer on the missing mass problem." },
-      { title:"The Physics of Black Holes", creator:"PBS Space Time", desc:"Event horizons, singularities, and Hawking radiation." },
+      { title:"The Cycle Of Stars", creator:"Brian Cox", desc:"Stellar evolution from birth to remnant" , url:"https://youtu.be/1YIDzCbdN0U?si=Bam7qWf7ULE8nNtK"},
+      { title:"The Evolution Of The Universe", creator:"Brian Cox", desc:"An accessible visual explainer on the evolution of the universe" , url:"https://youtu.be/97qnebweV3E?si=fI0kReQTKDVnrnWF"},
+      { title:"The Physics of Black Holes", creator:"ScienceCic", desc:"Event horizons, singularities, and more weird stuff" , url:"https://youtu.be/GQZ3R81iyE0?si=l6QMgcBEzcwYpguz"},
     ]},
-    { name:"Documentaries", videos:[
-      { title:"The Farthest: Voyager in Space", creator:"PBS", desc:"The story of humanity's most distant spacecraft." },
-      { title:"Cosmos: A Spacetime Odyssey", creator:"Neil deGrasse Tyson", desc:"A modern reboot of Sagan's classic series." },
-      { title:"In Saturn's Rings", creator:"IMAX", desc:"A visual journey through the outer solar system." },
+    { name:"Cool Visualizations", videos:[
+      { title:"General Relativity", creator:"ScienceClic", desc:"An easy way to understand general relativity", url:"https://youtu.be/wrwgIjBUYVc?si=ReMizgQu-exP0BfG" },
+      { title:"Travelling at the Speed Of Light", creator:"ScienceClic", desc:"What does being a photon feel like? Only one way to find out", url:"https://youtu.be/vFNgd3pitAI?si=E0XdUSinHOCHaXS2" },
+      { title:"Black Holes", creator:"ScienceClic", desc:"A visual journey of falling into a black hole" , url:"https://youtu.be/4rTv9wvvat8?si=JUtc_40LnvTjBX83"},
     ]},
-    { name:"Space Missions", videos:[
-      { title:"James Webb: First Images Explained", creator:"NASA", desc:"Breaking down JWST's earliest discoveries." },
-      { title:"How Artemis Will Return Us to the Moon", creator:"NASASpaceflight", desc:"A walkthrough of the Artemis program's architecture." },
-      { title:"Perseverance: Landing on Mars", creator:"NASA JPL", desc:"The '7 minutes of terror' explained in detail." },
+     { name:"How does the Universe actually work?", videos:[
+      { title:"The Standard Model", creator:"ScienceClic", desc:"Understand how the basic building blocks of matter interact through electromagnetic, weak, and strong forces, excluding only gravity", url:"https://youtu.be/44k7cMj_kpY?si=F2pxvBD1R8RjafIK" },
+      { title:"Electromagnetic Waves", creator:"ScienceClic", desc:"Ever wondered how everyday technologies like Wi-Fi or microwaves work? Then this video is for you", url:"https://youtu.be/V_jYXQFjCmA?si=xVJdcXMosDplwmTc" },
+      { title:"The Symmetry of the Universe", creator:"ScienceClic", desc:"A visualization of pretty much everything" , url:"https://youtu.be/0GUTJQCeKBE?si=X0OjeIdeeiXjJbD8"},
     ]},
-    { name:"Mathematics", videos:[
-      { title:"Essence of Calculus", creator:"3Blue1Brown", desc:"Building calculus intuition visually, from the ground up." },
-      { title:"Differential Equations, Visually", creator:"3Blue1Brown", desc:"Why differential equations show up everywhere in physics." },
-      { title:"Linear Algebra for Physics", creator:"Faculty of Khan", desc:"The linear algebra you actually need for mechanics and QM." },
-    ]},
-    { name:"Programming for Science", videos:[
-      { title:"Python for Astronomers", creator:"Astropy Project", desc:"Using Python and Astropy to analyze real sky data." },
-      { title:"Plotting Light Curves in Python", creator:"Corey Schafer", desc:"Practical data-plotting skills for exoplanet analysis." },
-      { title:"Intro to NumPy for Data Analysis", creator:"freeCodeCamp", desc:"The numerical foundation behind most science code." },
+    { name:"Overthinking about life and the universe? We all are", videos:[
+      { title:"100 Questions with Brian Cox", creator:"Tom Simons", desc:"Using Python and Astropy to analyze real sky data.", url:"https://youtu.be/WVJDTj2YRWY?si=yT5do-0skypwFRcO" },
+      { title:"Are Aliens Real?", creator:"Science Time", desc:"Even though we've never spotted them, it's entirely possible that aliens exist", url:"https://youtu.be/zS7fDY2jY44?si=-LoXjkm4GIgt1ePD" },
+      { title:"What Was Before the Big Bang? ", creator:"Science Time", desc:"The numerical foundation behind most science code." , url:"https://youtu.be/BD0r2Xfgh_E?si=GYSDmSmfUOZIPWD_"},
     ]},
   ];
 
