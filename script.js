@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { title:"Brief Answers to the Big Questions", desc:"The book blends theoretical physics with humanitarian concern to make complex science universally accessible", level:"beginner", fileUrl:"_OceanofPDF.com_Brief_Answers_to_the_Big_Questions_-_Stephen_Hawking.epub", fileType:"EPUB" },
   ]},
   { name:"Stories", books:[
-    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
-    { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" },
-    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen" , fileType:"PDF"},
+    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", level:"SciFi", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
+    { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", level:"Thriller",fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" },
+    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance",level:"YA", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen" , fileType:"PDF"},
   ]},
 ];
 
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { title:"Measure Light Pollution", difficulty:"beginner", time:"A few nights", materials:"Star chart or app, notebook", desc:"Estimate your sky's darkness by counting the faintest stars visible in a known constellation." },
   ];
 
-  const tagLabel = { beginner:"Beginner", intermediate:"Intermediate", advanced:"Advanced" };
+  const tagLabel = { beginner:"Beginner", intermediate:"Intermediate", advanced:"Advanced" , SciFi:"Science Fiction", YA:"Young Adult", Thriller:"Thriller"};
 
   function bookCard(book){
   return `
