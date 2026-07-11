@@ -148,12 +148,12 @@ document.addEventListener('DOMContentLoaded', () => {
      Add new items here — cards render automatically.
      ========================================================= */
   const COURSE_BOOKS = [
-    { title:"Astronomical Problems", desc:"An introductory course in astrophysics", level:"beginner", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBT6gAPQHAeT4e0JCTfV-4xAXqLZkEurRRnPwvfB39Cczw?e=d7v2hv" },
-    { title:"Introduction to Astronomy", desc:"From atomic nuclei to galactic superclusters", level:"beginner" },
-    { title:"Cosmology", desc:"The expanding universe, dark energy, and the Big Bang explained using accessible everyday analogies", level:"intermediate", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDOeFXZkgpOTosaL1j4beYdAfwJnduo-KZ2ieAnqSLDijs?e=8O1qSl" },
-    { title:"Fundamental Astronomy", desc:"A Comprehensive introduction to both classical and modern astronomy", level:"intermediate" , pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDH5AFn7tPmRpPzTiMPK9cGAQCKsM0nni0uO3JE01eRDfk?e=d4O0XF"},
-    { title:"Introduction to Cosmology: Second Edition", desc:"Learn accurate physics that aligns with standard university curricula", level:"advanced", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBrDKEB7pLrRIjYtd_FlaP5AYa9rSg7ELnkHC4hTm6X2q4?e=C38LYv"},
-    { title:"Foundations of Modern Astrophysics", desc:"A mathematically rigorous, and exhaustive deep dive into the actual physics governing everything", level:"advanced" },
+    { title:"Astronomical Problems", desc:"An introductory course in astrophysics", level:"beginner", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBT6gAPQHAeT4e0JCTfV-4xAXqLZkEurRRnPwvfB39Cczw?e=d7v2hv", cover:"astro1.jpg" },
+    { title:"Introduction to Astronomy", desc:"From atomic nuclei to galactic superclusters", level:"beginner", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBCRxSE5dOPQq-IXX3BYGtkAT8UAvBS6j5MSG5TpwF2nPs?e=IPT2mU", cover:"astro2.webp"},
+    { title:"Cosmology", desc:"The expanding universe, dark energy, and the Big Bang explained using accessible everyday analogies", level:"intermediate", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDOeFXZkgpOTosaL1j4beYdAfwJnduo-KZ2ieAnqSLDijs?e=8O1qSl", cover:"astro3.jfif" },
+    { title:"Fundamental Astronomy", desc:"A Comprehensive introduction to both classical and modern astronomy", level:"intermediate" , pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQDH5AFn7tPmRpPzTiMPK9cGAQCKsM0nni0uO3JE01eRDfk?e=d4O0XF", cover:"astro4.png"},
+    { title:"Introduction to Cosmology: Second Edition", desc:"Learn accurate physics that aligns with standard university curricula", level:"advanced", pdfUrl:"https://1drv.ms/b/c/bb4cb97d9f45c6fd/IQBrDKEB7pLrRIjYtd_FlaP5AYa9rSg7ELnkHC4hTm6X2q4?e=C38LYv", cover:"astro5.jpeg"},
+    { title:"Foundations of Modern Astrophysics", desc:"A mathematically rigorous, and exhaustive deep dive into the actual physics governing everything", level:"advanced", cover:"astro6.webp" },
   ];
 
   const READING_BOOKS = [
@@ -190,15 +190,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function bookCard(book){
   return `
     <div class="card" data-level="${book.level}" data-search="${book.title.toLowerCase()} ${book.desc.toLowerCase()}">
-      <div class="card-media mono">cover placeholder</div>
+      <div class="card-media" ${book.cover ? `style="background:url('${book.cover}') center/cover;"` : ''}>
+        ${book.cover ? '' : '<span class="mono">cover placeholder</span>'}
+      </div>
       <div class="card-body">
         <h3 class="card-title">${book.title}</h3>
         <p class="card-desc">${book.desc}</p>
         <div class="card-meta">
           <span class="tag ${book.level}">${tagLabel[book.level]}</span>
-          ${book.pdfUrl
-            ? `<a class="card-link" href="${book.pdfUrl}" target="_blank" rel="noopener">Download PDF ↓</a>`
-            : `<a class="card-link" href="#" onclick="return false;">Download PDF ↓</a>`}
+          <a class="card-link" href="#" onclick="return false;">Download PDF ↓</a>
         </div>
       </div>
     </div>`;
