@@ -232,7 +232,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById(id).innerHTML = items.map(cardFn).join('');
   }
   renderGrid('coursebooksGrid', COURSE_BOOKS, bookCard);
-  renderGrid('readingGrid', READING_BOOKS, bookCard);
+  document.getElementById('readingGrid').innerHTML = READING_CATEGORIES.map(cat => `
+  <div class="book-category">
+    <h3 class="book-category-title">${cat.name}</h3>
+    <div class="card-grid">${cat.books.map(bookCard).join('')}</div>
+  </div>`).join('');
   renderGrid('projectsGrid', PROJECTS, projectCard);
 
   function renderAccordion(){
