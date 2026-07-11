@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { title:"Brief Answers to the Big Questions", desc:"The book blends theoretical physics with humanitarian concern to make complex science universally accessible", level:"beginner", fileUrl:"_OceanofPDF.com_Brief_Answers_to_the_Big_Questions_-_Stephen_Hawking.epub", fileType:"EPUB" },
   ]},
   { name:"Stories", books:[
-    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", level:"SciFi", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
+    { title:"Insterstellar", desc:"A perfect blend between groundbreaking theoretical physics and a highly emotional, character-driven story", level:"Sci-Fi", fileUrl:"_OceanofPDF.com_Interstellar_-_Greg_Keyes.epub", fileType:"EPUB" },
     { title:"Dark Matter", desc:"A tense story about choices, paths not taken, and personal identity, with a bit of quantum mechanics", level:"Thriller",fileUrl:"_OceanofPDF.com_Dark_Matter_-_Blake_Crouch.epub", fileType:"EPUB" },
-    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance",level:"YA", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen" , fileType:"PDF"},
+    { title:"Ascension", desc:"One of the best fast-paced narratives that blends space exploration, greed, reality television, and romance",level:"Young Adult", fileUrl:"_OceanofPDF.com_Ascension_-_Victor_dixen" , fileType:"PDF"},
   ]},
 ];
 
@@ -189,11 +189,15 @@ document.addEventListener('DOMContentLoaded', () => {
     { title:"Measure Light Pollution", difficulty:"beginner", time:"A few nights", materials:"Star chart or app, notebook", desc:"Estimate your sky's darkness by counting the faintest stars visible in a known constellation." },
   ];
 
-  const tagLabel = { beginner:"Beginner", intermediate:"Intermediate", advanced:"Advanced" , SciFi:"Science Fiction", YA:"Young Adult", Thriller:"Thriller"};
+  const tagLabel = { beginner:"Beginner", intermediate:"Intermediate", advanced:"Advanced" };
 
   function bookCard(book){
+  const tagHtml = book.genre
+    ? `<span class="tag genre">${book.genre}</span>`
+    : `<span class="tag ${book.level}">${tagLabel[book.level]}</span>`;
+
   return `
-    <div class="card" data-level="${book.level}" data-search="${book.title.toLowerCase()} ${book.desc.toLowerCase()}">
+    <div class="card" data-level="${book.level || ''}" data-search="${book.title.toLowerCase()} ${book.desc.toLowerCase()} ${(book.genre || '').toLowerCase()}">
       <div class="card-media" ${book.cover ? `style="background:url('${book.cover}') center/cover;"` : ''}>
         ${book.cover ? '' : '<span class="mono">cover placeholder</span>'}
       </div>
@@ -201,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3 class="card-title">${book.title}</h3>
         <p class="card-desc">${book.desc}</p>
         <div class="card-meta">
-          <span class="tag ${book.level}">${tagLabel[book.level]}</span>
+          ${tagHtml}
           ${book.fileUrl
             ? `<a class="card-link" href="${book.fileUrl}" target="_blank" rel="noopener">Download ${book.fileType} ↓</a>`
             : `<a class="card-link" href="#" onclick="return false;">Coming soon</a>`}
