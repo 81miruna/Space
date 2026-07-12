@@ -184,14 +184,23 @@ document.addEventListener('DOMContentLoaded', () => {
   ]},
 ];
 
-  const PROJECTS = [
-    { title:"Build a Simple Telescope", difficulty:"beginner", time:"2–3 hours", materials:"Two lenses, cardboard tube, tape", desc:"Assemble a basic refracting telescope from household materials and learn how magnification works." },
-    { title:"Track Moon Phases", difficulty:"beginner", time:"1 month", materials:"Notebook, clear sky", desc:"Observe and sketch the Moon every few nights to build an intuitive feel for the lunar cycle." },
-    { title:"Observe Jupiter's Moons", difficulty:"intermediate", time:"Several evenings", materials:"Binoculars or small telescope, tripod", desc:"Spot the four Galilean moons and log their positions night to night." },
-    { title:"Analyze Exoplanet Data", difficulty:"advanced", time:"1–2 weekends", materials:"Laptop, spreadsheet or Python", desc:"Use public transit light-curve data to estimate a planet's size and orbital period." },
-    { title:"Build a Spectroscope", difficulty:"intermediate", time:"2–4 hours", materials:"CD/DVD, cardboard box, craft knife", desc:"Build a simple diffraction-grating spectroscope and split light into its component colors." },
-    { title:"Measure Light Pollution", difficulty:"beginner", time:"A few nights", materials:"Star chart or app, notebook", desc:"Estimate your sky's darkness by counting the faintest stars visible in a known constellation." },
-  ];
+  const RECOMMENDATIONS = [
+  {
+    title:"Web classes",
+    desc:"University of Groningen web classes are free, four-week online taster courses designed for high school and prospective students to experience a specific Bachelor's or Master's programme before enrolling. Participants review academic literature, watch video lectures, and submit weekly assignments to receive personal feedback from university tutors",
+    url:"https://www.rug.nl/education/bachelor/webklassen/?lang=en"
+  },
+  {
+    title:"Stellarium Web",
+    desc:"A free, browser-based planetarium. Type in your location and see exactly what's overhead tonight, including planets, constellations, and satellites. Great companion for naked-eye observing sessions.",
+    url:"https://stellarium-web.org"
+  },
+  {
+    title:"Sky and Telescope",
+    desc:"Another free, web-based planetarium tool that lets you generate a highly accurate, custom star map tailored to your exact date, time, and geographical location. It is perfect for lerning constellations, as you can print the unlabeled sky chart and complete it yourself",
+    url:"https://skyandtelescope.org/interactive-sky-chart/"
+  },
+];
 
   const tagLabel = { beginner:"Beginner", intermediate:"Intermediate", advanced:"Advanced" };
 
@@ -218,23 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>`;
 }
 
-  function projectCard(p){
-    return `
-      <div class="card" data-level="${p.difficulty}" data-search="${p.title.toLowerCase()} ${p.desc.toLowerCase()}">
-        <div class="card-media mono">project photo</div>
-        <div class="card-body">
-          <h3 class="card-title">${p.title}</h3>
-          <p class="card-desc">${p.desc}</p>
-          <p class="project-meta">
-            <span>⏱ ${p.time}</span>
-            <span>🧰 ${p.materials}</span>
-          </p>
-          <div class="card-meta">
-            <span class="tag ${p.difficulty}">${tagLabel[p.difficulty]}</span>
-          </div>
-        </div>
-      </div>`;
-  }
+  function recommendationCard(r){
+  return `
+    <div class="recommendation-card">
+      <h3 class="card-title">${r.title}</h3>
+      <p class="card-desc">${r.desc}</p>
+      <a class="btn btn-primary" href="${r.url}" target="_blank" rel="noopener">Visit Website</a>
+    </div>`;
+}
 
   function renderGrid(id, items, cardFn){
     document.getElementById(id).innerHTML = items.map(cardFn).join('');
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h3 class="book-category-title">${cat.name}</h3>
     <div class="card-grid">${cat.books.map(bookCard).join('')}</div>
   </div>`).join('');
-  renderGrid('projectsGrid', PROJECTS, projectCard);
+ renderGrid('recommendationsGrid', RECOMMENDATIONS, recommendationCard);
 
   function renderAccordion(){
     const el = document.getElementById('exerciseAccordion');
