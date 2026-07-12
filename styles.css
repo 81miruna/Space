@@ -266,6 +266,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   margin-top:auto;
   padding-top:10px;
 }
+.recommendation-card{
+  background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
+  padding:28px 26px; box-shadow:var(--shadow-soft);
+  display:flex; flex-direction:column; gap:14px;
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+}
+.recommendation-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(103,213,255,0.4);
+  box-shadow:0 24px 60px -18px rgba(103,213,255,0.25);
+}
+.recommendation-card .card-title{ margin:0; }
+.recommendation-card .card-desc{ margin:0; }
+.recommendation-card .btn{ align-self:flex-start; margin-top:4px; }
 .card-link{
   white-space:nowrap;
 }
