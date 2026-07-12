@@ -147,6 +147,23 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .nav-toggle{
   display:none; flex-direction:column; gap:5px; background:none; border:none; padding:8px;
 }
+.nav-toggle{
+  display:none; flex-direction:column; gap:5px; background:none; border:none; padding:8px;
+  position:relative;
+  z-index:60;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){
+  opacity:0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){
+  transform: translateY(-7px) rotate(-45deg);
+}
+.nav-toggle span{
+  transition: transform .3s var(--ease), opacity .3s var(--ease);
+}
 .nav-toggle span{ width:24px; height:2px; background:var(--text); border-radius:2px; transition:transform .3s var(--ease), opacity .3s var(--ease); }
 
 @media (max-width:860px){
