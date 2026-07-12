@@ -182,6 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
     { name:"Exercises", fileUrl:"problemsWeek.zip", fileType:"ZIP" },
     { name:"Solutions", fileUrl:"problemsWeek12.zip", fileType:"ZIP" },
   ]},
+   { topic:"Observational astronomy", worksheets:[
+    { name:"Messier objects, galaxies, stars and more", fileUrl:"converteasly.docx", fileType:"DOCX" },
+  ]},
 ];
 
   const RECOMMENDATIONS = [
