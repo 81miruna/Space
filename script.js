@@ -256,7 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>
         <div class="accordion-panel">
           <ul class="worksheet-list">
-            ${t.worksheets.map(w => `<li>${w} <a href="#" onclick="return false;">Download ↓</a></li>`).join('')}
+            ${t.worksheets.map(w => `
+              <li>${w.name}
+                ${w.fileUrl
+                  ? `<a href="${w.fileUrl}" target="_blank" rel="noopener">Download ${w.fileType || ''} ↓</a>`
+                  : `<a href="#" onclick="return false;">Coming soon</a>`}
+              </li>`).join('')}
           </ul>
         </div>
       </div>`).join('');
