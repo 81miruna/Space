@@ -170,15 +170,19 @@ document.addEventListener('DOMContentLoaded', () => {
 ];
 
   const EXERCISE_TOPICS = [
-    { topic:"Mechanics", worksheets:["Kinematics warm-up", "Newton's laws problem set", "Energy & momentum challenge"] },
-    { topic:"Electromagnetism", worksheets:["Electrostatics basics", "Circuits problem set", "Maxwell's equations primer"] },
-    { topic:"Waves", worksheets:["Wave properties worksheet", "Standing waves & resonance"] },
-    { topic:"Optics", worksheets:["Ray diagrams practice", "Lenses & telescopes problem set"] },
-    { topic:"Relativity", worksheets:["Special relativity warm-up", "Spacetime diagrams worksheet"] },
-    { topic:"Astronomy", worksheets:["Celestial coordinates practice", "Observing log template"] },
-    { topic:"Astrophysics", worksheets:["Stellar structure problem set", "Hertzsprung–Russell diagram exercise"] },
-    { topic:"Mathematics", worksheets:["Calculus for physics warm-up", "Differential equations practice"] },
-  ];
+  { topic:"Textbook selected exercises", worksheets:[
+    { name:"Set 1", fileUrl:"set1.docx", fileType:"DOCX" },
+    { name:"Set 2", fileUrl:"set2.docx" , fileType:"DOCX"},
+  ]},
+  { topic:"Diverse problems - 1/2", worksheets:[
+    { name:"Exercises", fileUrl:"HW3.zip" , fileType:"ZIP"},
+    { name:"Solutions", fileUrl:"HW4.zip" , fileType:"ZIP"},
+  ]},
+  { topic:"Diverse problems - 2/2", worksheets:[
+    { name:"Exercises", fileUrl:"problemsWeek.zip", fileType:"ZIP" },
+    { name:"Solutions", fileUrl:"problemsWeek12.zip", fileType:"ZIP" },
+  ]},
+];
 
   const PROJECTS = [
     { title:"Build a Simple Telescope", difficulty:"beginner", time:"2–3 hours", materials:"Two lenses, cardboard tube, tape", desc:"Assemble a basic refracting telescope from household materials and learn how magnification works." },
