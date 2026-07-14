@@ -437,9 +437,9 @@ document.addEventListener('DOMContentLoaded', () => {
      12. FAQ
      ========================================================= */
   const FAQS = [
-    { q:"I've never studied physics before — where do I start?", a:"Start in Resources → Course Books with the beginner-tagged titles, and pair them with the Beginner Astronomy video category. No prior background needed." },
+    { q:"I've never studied astrophysics before — where do I start?", a:"Start in Resources → Course Books with the beginner-tagged titles, and pair them with the Beginner Astronomy video category. No prior background needed." },
     { q:"Do I need a telescope to get started?", a:"Not at all. Several projects and most of the monthly updates are built around naked-eye or binocular observing." },
-    { q:"Are the star maps and educational resources free to download and use in classrooms?", a:"Of course! Feel free to download whatever you want and ask for more resources if you need them." },
+    { q:"Are the educational resources and worksheets free to download?", a:"Of course! Feel free to download whatever you want and ask for more resources if you need them." },
     { q:"Can I suggest a book, video, or project?", a:"Yes — use the contact form below. Suggestions are always welcome." },
   ];
 
