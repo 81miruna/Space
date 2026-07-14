@@ -6,6 +6,16 @@
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+   /* ============ 0. ANALYTICS EVENT HELPER ============ */
+  function trackEvent(name){
+    if (window.goatcounter && window.goatcounter.count){
+      window.goatcounter.count({
+        path: name,
+        title: name,
+        event: true
+      });
+    }
+  }
   
 
   /* ============ 1. STARFIELD BACKGROUND ============ */
@@ -95,9 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
       toggle.setAttribute('aria-expanded', open);
     });
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded', false);
-    }));
+  links.classList.remove('open');
+  toggle.setAttribute('aria-expanded', false);
+  trackEvent('nav: ' + a.textContent.trim());
+}));
   })();
 
   /* ============ 4. CONSTELLATION RAIL — scroll spy ============ */
@@ -258,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="recommendation-card">
       <h3 class="card-title">${r.title}</h3>
       <p class="card-desc">${r.desc}</p>
-      <a class="btn btn-primary" href="${r.url}" target="_blank" rel="noopener">Visit Website</a>
+      <a class="btn btn-primary" href="${r.url}" target="_blank" rel="noopener" onclick="trackEvent('recommendation: ${r.title}')">Visit Website</a>
     </div>`;
 }
 
@@ -308,6 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.add('active');
       document.querySelectorAll('.resource-panel').forEach(p => p.classList.remove('active'));
       document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+       trackEvent('resource-tab: ' + tab.dataset.tab);
     }));
   })();
 
