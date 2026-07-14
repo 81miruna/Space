@@ -6,6 +6,8 @@
    ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+   <script data-goatcounter="https://miruna.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
   /* ============ 1. STARFIELD BACKGROUND ============ */
   (function starfield(){
