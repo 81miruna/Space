@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { name:"Solutions", fileUrl:"problemsWeek12.zip", fileType:"ZIP" },
   ]},
    { topic:"Observational astronomy", worksheets:[
-    { name:"Messier objects, galaxies, stars and more", fileUrl:"converteasly.docx", fileType:"DOCX" },
+    { name:"Messier objects, galaxies, stars and more", fileUrl:"mc.docx", fileType:"DOCX" },
   ]},
 ];
 
