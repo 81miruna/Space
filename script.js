@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ]},
    { topic:"Observational astronomy", worksheets:[
     { name:"Messier objects, galaxies, stars and more", fileUrl:"mc.docx", fileType:"DOCX" },
+    { name:"Sky Academy", fileUrl:"https://apps.apple.com/us/app/sky-academy-learn-astronomy/id1571488252", label:"Get the App ↗" },
   ]},
 ];
 
@@ -202,6 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
     title:"Sky and Telescope",
     desc:"Another free, web-based planetarium tool that lets you generate a highly accurate, custom star map tailored to your exact date, time, and geographical location. It is perfect for lerning constellations, as you can print the unlabeled sky chart and complete it yourself",
     url:"https://skyandtelescope.org/interactive-sky-chart/"
+  },
+      {
+    title:"Zooniverse",
+    desc:"The Zooniverse is the world's largest platform for people-powered research. The platform is driven by volunteers: all ages and backgrounds are welcome to participate, no PhD required — just a sense of wonder and a few clicks.",
+    url:"https://www.zooniverse.org/"
   },
 ];
 
@@ -262,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${t.worksheets.map(w => `
               <li>${w.name}
                 ${w.fileUrl
-                  ? `<a href="${w.fileUrl}" target="_blank" rel="noopener">Download ${w.fileType || ''} ↓</a>`
+                  ? `<a href="${w.fileUrl}" target="_blank" rel="noopener">${w.label || `Download ${w.fileType || ''} ↓`}</a>`
                   : `<a href="#" onclick="return false;">Coming soon</a>`}
               </li>`).join('')}
           </ul>
