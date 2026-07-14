@@ -134,7 +134,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold:0.12 });
     items.forEach(i => observer.observe(i));
   })();
+/* ============ 5b. FADE-IN FOR RESOURCE CARDS ============ */
+(function cardReveal(){
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting){
+        setTimeout(() => entry.target.classList.add('in-view'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold:0.1 });
 
+  function observeCards(){
+    document.querySelectorAll('.card, .recommendation-card').forEach(c => observer.observe(c));
+  }
+  // small delay since cards are injected by other scripts right above this one
+  setTimeout(observeCards, 50);
+})();
   /* ============ 6. BACK TO TOP ============ */
   (function backToTop(){
     const btn = document.getElementById('backToTop');
