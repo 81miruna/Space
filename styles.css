@@ -330,7 +330,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* =========================================================
    About
    ========================================================= */
-.about-grid{ display:grid; grid-template-columns:260px 1fr; gap:56px; align-items:start; }
+.about-grid{
+  display:grid; grid-template-columns:1fr; max-width:760px; margin:0 auto;
+}
 .photo-placeholder{
   aspect-ratio:1; border-radius:var(--radius-lg); background:var(--card);
   border:1px dashed rgba(103,213,255,0.35);
@@ -339,13 +341,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .goals-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
 .goals-list li{ display:flex; gap:10px; color:var(--muted); }
 .goal-icon{ color:var(--accent); flex-shrink:0; }
-.interest-cards{ display:flex; flex-wrap:wrap; gap:12px; margin-top:6px; }
 .interest-card{
   background:var(--card); border:1px solid var(--border); border-radius:100px;
-  padding:10px 20px; font-size:0.9rem; transition:transform .3s var(--ease), border-color .3s var(--ease);
+  padding:10px 20px; font-size:0.9rem; display:inline-block; cursor:pointer;
+  transition:transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease), color .3s var(--ease);
 }
-.interest-card:hover{ transform:translateY(-3px); border-color:var(--accent); }
-
+.interest-card:hover{
+  transform:translateY(-3px);
+  border-color:var(--accent);
+  box-shadow:0 8px 24px -8px rgba(103,213,255,0.4);
+  color:var(--accent);
+}
 @media (max-width:760px){
   .about-grid{ grid-template-columns:1fr; }
   .photo-placeholder{ max-width:220px; }
