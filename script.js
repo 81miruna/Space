@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { text: "Astronomy compels the soul to look upward, and leads us from this world to another.", author: "Plato" },
       { text: "The universe is under no obligation to make sense to you.", author: "Neil deGrasse Tyson" },
       { text: "We are a way for the cosmos to know itself.", author: "Carl Sagan" },
-      { text: "Somewhere, something incredible is waiting to be known — and it starts with looking up.", author: "adapted from Carl Sagan" }
+      { text: "Somewhere, something incredible is waiting to be known.", author: "Carl Sagan" }
     ];
     const q = quotes[Math.floor(Math.random() * quotes.length)];
     document.querySelector('.quote-text').textContent = q.text;
