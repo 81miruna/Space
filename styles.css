@@ -278,7 +278,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .card, .recommendation-card{
   opacity:0;
   transform:translateY(20px);
-  transition:opacity .6s var(--ease), transform .6s var(--ease);
+  transition:opacity .5s var(--ease), transform .5s var(--ease);
 }
 .card.in-view, .recommendation-card.in-view{
   opacity:1;
