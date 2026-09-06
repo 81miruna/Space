@@ -442,6 +442,24 @@ document.addEventListener('DOMContentLoaded', () => {
         "Comet 3I/ATLAS is older than the Solar System. NASA confirms our most recent visitor is 10 to 12 billion years old.",
       ],
     },
+     {
+      month:"August 2026",
+      title:"Solar eclipse",
+      image:"july.webp",
+      url:"https://www.timeanddate.com/eclipse/solar/2026-august-12",
+      items:[
+        "This was the first total eclipse to be visible in Europe since 20 March 2015, and the first one to cross over Mainland Europe since 11 August 1999.  Occurring about 2.3 days after perigee, the Moon's apparent diameter was larger.",
+      ],
+    },
+     {
+      month:"September 2026",
+      title:"The launch of the Nancy Grace Roman Telescope",
+      image:"july.webp",
+      url:"https://spacedaily.com/m-in-july-2026-europes-euclid-telescope-found-31-of-the-oldest-quasars-ever-seen-two-now-shining-with-the-light-of-a-trillion-suns-when-the-cosmos-was-just-5-percent-of-its-present-age-thei/",
+      items:[
+        "The successful launch of NASA's Nancy Grace Roman Space Telescope represents a massive leap for observational astronomy. It can map the skies 1,000 times faster than Hubble while keeping the same sharp infrared resolution. Roman is anticipated to discover more than 100,000 new exoplanets.",
+      ],
+    },
     
   ];
 
