@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
      {
       month:"August 2026",
       title:"Solar eclipse",
-      image:"july.webp",
+      image:"august.jpeg",
       url:"https://www.timeanddate.com/eclipse/solar/2026-august-12",
       items:[
         "This was the first total eclipse to be visible in Europe since 20 March 2015, and the first one to cross over Mainland Europe since 11 August 1999.  Occurring about 2.3 days after perigee, the Moon's apparent diameter was larger.",
@@ -453,11 +453,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
      {
       month:"September 2026",
-      title:"The launch of the Nancy Grace Roman Telescope",
-      image:"july.webp",
-      url:"https://spacedaily.com/m-in-july-2026-europes-euclid-telescope-found-31-of-the-oldest-quasars-ever-seen-two-now-shining-with-the-light-of-a-trillion-suns-when-the-cosmos-was-just-5-percent-of-its-present-age-thei/",
+      title:"Voyager 1",
+      image:"voyager.jfif",
+      url:"https://economictimes.indiatimes.com/us/science-tech/the-farthest-human-made-object-is-now-so-distant-that-even-light-takes-nearly-24-hours-to-reach-it-exactly-49-years-after-nasa-launched-voyager-1-to-explore-jupiter-and-saturn-the-spacecraft-is-still-in-interstellar-space-and-sending-data-back-to-earth/articleshow/133824323.cms?from=mdr",
       items:[
-        "The successful launch of NASA's Nancy Grace Roman Space Telescope represents a massive leap for observational astronomy. It can map the skies 1,000 times faster than Hubble while keeping the same sharp infrared resolution. Roman is anticipated to discover more than 100,000 new exoplanets.",
+        "The farthest human-made object is now so distant that even light takes nearly 24 hours to reach it; exactly 49 years after NASA launched Voyager 1 to explore Jupiter and Saturn, the spacecraft is still in interstellar space and sending data back to Earth",
       ],
     },
     
