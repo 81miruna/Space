@@ -425,21 +425,21 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================= */
   const MONTHLY_UPDATES = [
     {
-      month:"July 2026",
-      title:"The oldest quasars ever seen",
-      image:"july.webp",
-      url:"https://spacedaily.com/m-in-july-2026-europes-euclid-telescope-found-31-of-the-oldest-quasars-ever-seen-two-now-shining-with-the-light-of-a-trillion-suns-when-the-cosmos-was-just-5-percent-of-its-present-age-thei/",
-      items:[
-        "Europe's Euclid telescope has found 31 of the oldest known quasars in one go, and the haul roughly doubles the number known from that early stretch of the universe.",
-      ],
-    },
-    {
       month:"June 2026",
       title:"Comet 3I/ATLAS",
       image:"june.jpg",
       url:"https://bintel.com.au/blogs/news/space-and-astronomy-news-27th-june-2026?srsltid=AfmBOooVnHeQG3ePpb8Zy1Rwj15uDyoeHtvKPfhJRoukqkQw0q1AiucS",
       items:[
         "Comet 3I/ATLAS is older than the Solar System. NASA confirms our most recent visitor is 10 to 12 billion years old.",
+      ],
+    },
+     {
+      month:"July 2026",
+      title:"The oldest quasars ever seen",
+      image:"july.webp",
+      url:"https://spacedaily.com/m-in-july-2026-europes-euclid-telescope-found-31-of-the-oldest-quasars-ever-seen-two-now-shining-with-the-light-of-a-trillion-suns-when-the-cosmos-was-just-5-percent-of-its-present-age-thei/",
+      items:[
+        "Europe's Euclid telescope has found 31 of the oldest known quasars in one go, and the haul roughly doubles the number known from that early stretch of the universe.",
       ],
     },
      {
