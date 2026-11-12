@@ -35,6 +35,7 @@
   <button class="rail-dot" data-target="resources" aria-label="Resources"><span class="rail-label">Resources</span></button>
   <button class="rail-dot" data-target="youtube" aria-label="YouTube Recommendations"><span class="rail-label">YouTube</span></button>
   <button class="rail-dot" data-target="updates" aria-label="Monthly Astronomy Updates"><span class="rail-label">Monthly Updates</span></button>
+  <button class="rail-dot" data-target="variable-stars" aria-label="Variable Stars Discovered by Me"><span class="rail-label">Variable Stars</span></button>
   <button class="rail-dot" data-target="tutoring" aria-label="Private Tutoring"><span class="rail-label">Tutoring</span></button>
   <button class="rail-dot" data-target="contact" aria-label="Contact"><span class="rail-label">Contact</span></button>
 </nav>
@@ -53,6 +54,7 @@
     <li><a href="#resources" class="nav-link">Resources</a></li>
     <li><a href="#youtube" class="nav-link">YouTube</a></li>
     <li><a href="#updates" class="nav-link">Monthly Updates</a></li>
+    <li><a href="#variable-stars" class="nav-link">Variable Stars</a></li>
     <li><a href="#faq" class="nav-link">FAQ</a></li>
     <li><a href="#tutoring" class="nav-link">Private Tutoring</a></li>
     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -214,6 +216,20 @@
   </div>
 </section>
 
+  <!-- ================= VARIABLE STARS ================= -->
+<section id="variable-stars" class="section variable-stars fade-section">
+  <div class="container">
+    <p class="eyebrow mono">06 — my discoveries</p>
+    <h2 class="section-title">Variable Stars Discovered by Me</h2>
+    <p class="lead">
+      Stars whose brightness changes over time, found and analysed by me. Each card lists
+      the star's type, period, brightness range and where the discovery is catalogued.
+    </p>
+
+    <div class="vs-grid" id="variableStarsGrid"></div>
+    <p class="empty-state mono" id="vsEmptyState" hidden>New discoveries coming soon — keep looking up.</p>
+  </div>
+</section>
    <!-- ================= PRIVATE TUTORING ================= -->
 <section id="tutoring" class="section tutoring fade-section">
   <div class="container narrow">
@@ -286,7 +302,6 @@
   <p class="footer-tagline">Keep Looking Up.</p>
 </footer>
 
-<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <script data-goatcounter="https://miruna.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
