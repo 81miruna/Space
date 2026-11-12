@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
       image:"spaceweek.jfif",
       url:"https://www.worldspaceweek.org/p/highlights",
       items:[
-        "World Space Week consists of space education and outreach events held by space agencies, aerospace companies, schools, planetaria, museums, and astronomy clubs around the world in a common timeframe. These synchronized space events attract greater public and media attention.",
+        "World Space Week consists of space education and outreach events held by space agencies, aerospace companies, schools, planetaria, museums, and astronomy clubs around the world in a common timeframe.",
       ],
     },
       {
