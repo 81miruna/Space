@@ -517,7 +517,7 @@ document.addEventListener('DOMContentLoaded', () => {
       type: "ORG",
       typeFull: "Oscillating Red Giant",
       period: "-",
-      magnitude range: "3.96",
+      magnitude_range: "3.96",
       ra: "22h 46m 31.88s",
       dec: "+23° 33′ 56.4″",
       discovered: "August 2026",
