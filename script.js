@@ -460,6 +460,24 @@ document.addEventListener('DOMContentLoaded', () => {
         "The farthest human-made object is now so distant that even light takes nearly 24 hours to reach it; exactly 49 years after NASA launched Voyager 1 to explore Jupiter and Saturn, the spacecraft is still in interstellar space and sending data back to Earth",
       ],
     },
+     {
+      month:"October 2026",
+      title:"World Space Week",
+      image:"spaceweek.jfif",
+      url:"https://www.worldspaceweek.org/p/highlights",
+      items:[
+        "World Space Week consists of space education and outreach events held by space agencies, aerospace companies, schools, planetaria, museums, and astronomy clubs around the world in a common timeframe. These synchronized space events attract greater public and media attention.",
+      ],
+    },
+      {
+      month:"November 2026",
+      title:"Rare supermassive neutron star",
+      image:"neutron.jfif",
+      url:"https://www.scientificamerican.com/article/newfound-invisible-object-in-space-could-be-a-rare-supermassive-neutron-star/",
+      items:[
+        "Astronomers saw something strange in a distant star system—or rather what’s strange is what they didn’t see. Solving the mystery could reveal new astrophysics.",
+      ],
+    },
     
   ];
 
