@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ra: "22h 46m 31.88s",
       dec: "+23° 33′ 56.4″",
       discovered: "August 2026",
-      instrument: "Tess and GaiaDR3 data used",
+      instrument: "Tess and GaiaDR3",
       status: "Confirmed by VSX",          // e.g. Candidate, Submitted to VSX, Confirmed
       image: "lamda.webp",                      
       url: "https://vsx.aavso.org/index.php?view=detail.top&oid=10876450"   
@@ -562,7 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <dl class="vs-data">
             ${row('Constellation', s.constellation)}
             ${row('Period', s.period)}
-            ${row('Magnitude', s.magnitude)}
+            ${row('Magnitude range', s.magnitude)}
             ${row('RA', s.ra)}
             ${row('Dec', s.dec)}
             ${row('Discovered', s.discovered)}
