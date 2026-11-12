@@ -16,7 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
-  
+    /* ============ 0. ANALYTICS EVENT HELPER ============ */
+  window.trackEvent = function(name){
+    if (window.goatcounter && window.goatcounter.count){
+      window.goatcounter.count({
+        path: name,
+        title: name,
+        event: true
+      });
+    }
+  };
 
   /* ============ 1. STARFIELD BACKGROUND ============ */
   (function starfield(){
@@ -496,6 +505,83 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </article>`).join('');
 
+     /* =========================================================
+     11b. VARIABLE STARS DISCOVERED BY ME
+     Add a new object at the top of VARIABLE_STARS to publish
+     a new discovery. Leave a field out (or "") to hide it.
+     ========================================================= */
+  const VARIABLE_STARS = [
+    {
+      designation: "EXAMPLE-001",          // name / catalogue ID
+      constellation: "Cygnus",
+      type: "EW",                          // e.g. EA, EW, RRAB, DSCT, SR, M
+      typeFull: "W Ursae Majoris-type eclipsing binary",
+      period: "0.3456 d",
+      magnitude: "12.1 – 12.6 V",
+      ra: "20h 15m 30.1s",
+      dec: "+42° 10′ 05″",
+      discovered: "March 2026",
+      instrument: "Describe telescope / survey data used",
+      status: "Submitted to VSX",          // e.g. Candidate, Submitted to VSX, Confirmed
+      image: "",                           // light curve image, e.g. "lc-example001.png"
+      url: ""                              // link to VSX / AAVSO / your report
+    },
+    {
+      designation: "EXAMPLE-002",
+      constellation: "Lyra",
+      type: "RRAB",
+      typeFull: "RR Lyrae variable",
+      period: "0.5678 d",
+      magnitude: "13.0 – 14.1 V",
+      ra: "18h 50m 12.4s",
+      dec: "+36° 45′ 20″",
+      discovered: "May 2026",
+      instrument: "Describe telescope / survey data used",
+      status: "Candidate",
+      image: "",
+      url: ""
+    },
+  ];
+
+  function variableStarCard(s){
+    const row = (label, value) => value
+      ? `<div class="vs-row"><dt>${label}</dt><dd>${value}</dd></div>`
+      : '';
+    const statusClass = (s.status || '').toLowerCase().includes('confirmed') ? 'confirmed' : 'pending';
+    return `
+      <article class="vs-card">
+        <div class="vs-media" ${s.image ? `style="background:url('${s.image}') center/cover;"` : ''}>
+          ${s.image ? '' : '<span class="mono">light curve placeholder</span>'}
+        </div>
+        <div class="vs-body">
+          <div class="vs-head">
+            <h3 class="vs-title">${s.designation}</h3>
+            ${s.type ? `<span class="tag vs-type">${s.type}</span>` : ''}
+          </div>
+          ${s.typeFull ? `<p class="vs-typefull">${s.typeFull}</p>` : ''}
+          <dl class="vs-data">
+            ${row('Constellation', s.constellation)}
+            ${row('Period', s.period)}
+            ${row('Magnitude', s.magnitude)}
+            ${row('RA', s.ra)}
+            ${row('Dec', s.dec)}
+            ${row('Discovered', s.discovered)}
+            ${row('Data', s.instrument)}
+          </dl>
+          <div class="vs-footer">
+            ${s.status ? `<span class="vs-status ${statusClass}">${s.status}</span>` : ''}
+            ${s.url ? `<a class="card-link" href="${s.url}" target="_blank" rel="noopener" onclick="trackEvent('variable-star: ${s.designation}')">View catalogue entry →</a>` : ''}
+          </div>
+        </div>
+      </article>`;
+  }
+
+  (function renderVariableStars(){
+    const grid = document.getElementById('variableStarsGrid');
+    const empty = document.getElementById('vsEmptyState');
+    if (!VARIABLE_STARS.length){ empty.hidden = false; return; }
+    grid.innerHTML = VARIABLE_STARS.map(variableStarCard).join('');
+  })();
   /* =========================================================
      12. FAQ
      ========================================================= */
