@@ -512,19 +512,19 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================= */
   const VARIABLE_STARS = [
     {
-      designation: "EXAMPLE-001",          // name / catalogue ID
-      constellation: "Cygnus",
-      type: "EW",                          // e.g. EA, EW, RRAB, DSCT, SR, M
-      typeFull: "W Ursae Majoris-type eclipsing binary",
-      period: "0.3456 d",
-      magnitude: "12.1 – 12.6 V",
-      ra: "20h 15m 30.1s",
-      dec: "+42° 10′ 05″",
-      discovered: "March 2026",
-      instrument: "Describe telescope / survey data used",
-      status: "Submitted to VSX",          // e.g. Candidate, Submitted to VSX, Confirmed
-      image: "",                           // light curve image, e.g. "lc-example001.png"
-      url: ""                              // link to VSX / AAVSO / your report
+      designation: "lam Peg",       
+      constellation: "Pegasus",
+      type: "ORG",
+      typeFull: "Oscillating Red Giant",
+      period: "-",
+      magnitude range: "3.96",
+      ra: "22h 46m 31.88s",
+      dec: "+23° 33′ 56.4″",
+      discovered: "August 2026",
+      instrument: "Tess and GaiaDR3 data used",
+      status: "Confirmed by VSX",          // e.g. Candidate, Submitted to VSX, Confirmed
+      image: "lamda.webp",                      
+      url: "https://vsx.aavso.org/index.php?view=detail.top&oid=10876450"   
     },
     {
       designation: "EXAMPLE-002",
